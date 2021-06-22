@@ -1,0 +1,30 @@
+{% extends '../layout.html' %}
+
+{% block content %}
+
+<div class="container">
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+  <tbody>
+
+   {% for row in students%}
+    <tr>
+      <td>{{row.name}}</td>
+      <td>{{row.age}}</td>
+      <td>{{row.department}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a class="link-success" href="{% url 'form' %}">Add Student</a>
+
+</div>
+
+ {% endblock %}
+

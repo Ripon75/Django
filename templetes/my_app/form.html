@@ -1,0 +1,15 @@
+{% extends '../layout.html' %}
+
+{% block content %}
+
+<div class="container">
+ <form action="" method="POST">
+ {% csrf_token %}
+ {{student_form.as_p}}
+ <input type="submit" value="Submit">
+ </form>
+<a href="{%url 'index'%}" class="link-warning">All Student</a>
+</div>
+
+ {% endblock %}
+
